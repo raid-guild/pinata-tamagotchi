@@ -312,7 +312,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
   });
 
   useEffect(() => {
-    fetch("/api/pet")
+    fetch("/app/api/pet")
       .then((response) => (response.ok ? response.json() : null))
       .then((data: PetSnapshot | null) => {
         if (data) {
@@ -336,7 +336,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
   async function care(action: CareAction) {
     setPending(action);
     try {
-      const response = await fetch("/api/pet/action", {
+      const response = await fetch("/app/api/pet/action", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ action })
@@ -350,7 +350,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
   async function reset() {
     setPending("reset");
     try {
-      const response = await fetch("/api/pet/reset", { method: "POST" });
+      const response = await fetch("/app/api/pet/reset", { method: "POST" });
       if (response.ok) {
         const data = (await response.json()) as PetSnapshot;
         setSnapshot(data);
@@ -367,7 +367,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
     event.preventDefault();
     setPending("profile");
     try {
-      const response = await fetch("/api/profile", {
+      const response = await fetch("/app/api/profile", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ ...profileDraft, debugEnabled: debugEnabledDraft })
@@ -387,7 +387,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
     event.preventDefault();
     setPending("topic");
     try {
-      const response = await fetch("/api/topics", {
+      const response = await fetch("/app/api/topics", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(topicDraft)
@@ -405,7 +405,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
     event.preventDefault();
     setPending("debug");
     try {
-      const response = await fetch("/api/debug/advance", {
+      const response = await fetch("/app/api/debug/advance", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(debugDraft)
@@ -473,7 +473,7 @@ export default function PetScene({ initialSnapshot }: { initialSnapshot: PetSnap
               <button className="secondary-button" disabled={pending !== null} onClick={reset} type="button">
                 Reset
               </button>
-              <a className="secondary-button" href="/api/pet">
+              <a className="secondary-button" href="/app/api/pet">
                 API
               </a>
             </div>
