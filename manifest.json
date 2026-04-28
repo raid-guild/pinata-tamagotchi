@@ -24,12 +24,5 @@
       "path": "/app",
       "protected": false
     }
-  ],
-  "tasks": [
-    {
-      "name": "daily-pet-nudge",
-      "schedule": "0 9 * * *",
-      "prompt": "Check the Tamagotchi app state and suggest one small care ritual or interface experiment for today."
-    }
   ]
 }
