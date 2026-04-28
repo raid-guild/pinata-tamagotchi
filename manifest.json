@@ -15,7 +15,7 @@
   },
   "secrets": [],
   "scripts": {
-    "build": "npm install --no-audit --no-fund && npm run build",
+    "build": "npm install && npm run build",
     "start": "npm start"
   },
   "routes": [

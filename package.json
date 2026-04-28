@@ -6,12 +6,18 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --hostname 0.0.0.0 --port 3000",
-    "start": "node server.js",
+    "start": "pm2-runtime start ecosystem.config.cjs",
+    "start:web": "node server.js",
+    "start:daemon": "pm2 start ecosystem.config.cjs",
+    "pm2:reload": "pm2 reload ecosystem.config.cjs --update-env",
+    "pm2:stop": "pm2 delete pinata-tamagotchi",
+    "pm2:logs": "pm2 logs pinata-tamagotchi --lines 100",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "better-sqlite3": "^12.4.1",
     "next": "^15.3.1",
+    "pm2": "^6.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

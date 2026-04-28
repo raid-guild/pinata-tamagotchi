@@ -26,7 +26,7 @@ Open `http://localhost:3000`.
 The manifest follows the Pinata template shape:
 
 - `scripts.build`: installs dependencies and builds the app.
-- `scripts.start`: launches `node server.js`.
+- `scripts.start`: launches `pm2-runtime`.
 - `routes[0]`: exposes port `3000` at `/app`.
 
 After importing this public repo as a Pinata template, deploy it and visit the generated `/app` route.

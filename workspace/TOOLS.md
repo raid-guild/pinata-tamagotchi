@@ -3,7 +3,7 @@
 Runtime:
 
 - Next.js on port `3000`.
-- Next.js served through `node server.js`.
+- PM2 through `pm2-runtime`.
 - SQLite via `better-sqlite3`.
 
 Pinata route:
