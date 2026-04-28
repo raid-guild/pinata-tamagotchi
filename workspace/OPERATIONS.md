@@ -7,10 +7,6 @@ npm install
 npm run dev
 npm run build
 npm start
-npm run start:daemon
-npm run pm2:reload
-npm run pm2:stop
-npm run pm2:logs
 ```
 
 The app serves on port `3000`. Pinata exposes it at `/app`.
