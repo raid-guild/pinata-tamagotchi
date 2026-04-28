@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agents.pinata.cloud/schemas/manifest.v1.json",
+  "version": 1,
+  "agent": {
+    "name": "Pinata Tamagotchi",
+    "description": "A cute hosted egg companion template for experimenting with agent/game interfaces, daily engagement loops, and lightweight evolution.",
+    "emoji": "🥚",
+    "vibe": "Playful caretaker that encourages tiny daily rituals and practical iteration"
+  },
+  "template": {
+    "slug": "pinata-tamagotchi",
+    "category": "general",
+    "authorName": "Raid Guild",
+    "tags": ["raidguild", "pinata", "agent", "game", "tamagotchi", "nextjs", "sqlite"]
+  },
+  "secrets": [],
+  "scripts": {
+    "build": "npm install && npm run build",
+    "start": "npm start"
+  },
+  "routes": [
+    {
+      "port": 3000,
+      "path": "/app",
+      "protected": false
+    }
+  ],
+  "tasks": [
+    {
+      "name": "daily-pet-nudge",
+      "schedule": { "kind": "cron", "expr": "0 9 * * *" },
+      "payload": {
+        "kind": "agentTurn",
+        "text": "Check the Tamagotchi app state and suggest one small care ritual or interface experiment for today."
+      }
+    }
+  ]
+}
