@@ -1,5 +1,5 @@
-import PetScene from "@/app/components/PetScene";
-import { getSnapshot } from "@/lib/pet-store";
+import PetScene from "./components/PetScene";
+import { getSnapshot } from "../lib/pet-store";
 
 export const dynamic = "force-dynamic";
 

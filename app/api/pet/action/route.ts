@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { applyCareAction, isCareAction } from "@/lib/pet-store";
+import { applyCareAction, isCareAction } from "../../../../lib/pet-store";
 
 export const dynamic = "force-dynamic";
 

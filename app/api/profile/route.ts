@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSnapshot, updateProfile } from "@/lib/pet-store";
+import { getSnapshot, updateProfile } from "../../../lib/pet-store";
 
 export const dynamic = "force-dynamic";
 

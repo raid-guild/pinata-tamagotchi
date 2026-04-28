@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resetPet } from "@/lib/pet-store";
+import { resetPet } from "../../../../lib/pet-store";
 
 export const dynamic = "force-dynamic";
 

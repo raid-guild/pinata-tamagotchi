@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { replyAsPet } from "@/lib/pet-store";
+import { replyAsPet } from "../../../../lib/pet-store";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";

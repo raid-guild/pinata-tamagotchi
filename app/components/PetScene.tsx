@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { FormEvent } from "react";
-import type { CareAction, EvolutionTrack, LearnedTopic, PetEvent, PetProfile, PetSnapshot, PetStage, PetState } from "@/lib/pet-store";
+import type { CareAction, EvolutionTrack, LearnedTopic, PetEvent, PetProfile, PetSnapshot, PetStage, PetState } from "../../lib/pet-store";
 
 const actions: Array<{ id: CareAction; label: string; className: string }> = [
   { id: "feed", label: "Feed", className: "feed" },
