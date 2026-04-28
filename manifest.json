@@ -29,10 +29,7 @@
     {
       "name": "daily-pet-nudge",
       "schedule": { "kind": "cron", "expr": "0 9 * * *" },
-      "payload": {
-        "kind": "agentTurn",
-        "text": "Check the Tamagotchi app state and suggest one small care ritual or interface experiment for today."
-      }
+      "prompt": "Check the Tamagotchi app state and suggest one small care ritual or interface experiment for today."
     }
   ]
 }
