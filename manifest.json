@@ -28,7 +28,7 @@
   "tasks": [
     {
       "name": "daily-pet-nudge",
-      "schedule": { "kind": "cron", "expr": "0 9 * * *" },
+      "schedule": "0 9 * * *",
       "prompt": "Check the Tamagotchi app state and suggest one small care ritual or interface experiment for today."
     }
   ]
